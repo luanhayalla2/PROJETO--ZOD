@@ -38,28 +38,36 @@ O projeto utiliza um formulário interativo para capturar dados de usuários e e
 1.  **Clone o repositório:**
     ```bash
     git clone <url-do-seu-repositorio>
+    git clone https://github.com/seu-usuario/projeto-interativo.git
     cd projeto-interativo
-    ```
 
-2.  **Instale as dependências:**
+    ``
+    ```
+2.  **Instale as dependências:** 
     Este comando instalará as dependências tanto do frontend quanto do backend.
     ```bash
     npm install
     ```
-
-3.  **Inicie o Frontend (Interface Visual):**
-    Em um terminal, execute:
+3.  **Inicie os servidores de desenvolvimento:**
+     Você precisará de **dois terminais** abertos na raiz do projeto (`projeto-interativo`).
+    Este comando iniciará o servidor do frontend (Vite) e o do backend (Node.js/Express) simultaneamente.
     ```bash
-    npm run dev
+    npm run start
     ```
-
-4.  **Inicie o Backend (Servidor):**
-    Abra um **novo terminal na raiz do projeto** (`projeto-interativo`) e execute:
-    ```bash
-    npm run dev:backend
-    ```
-
-Após seguir esses passos, a aplicação frontend estará disponível em `http://localhost:5173` e o servidor backend estará rodando na porta `3001`.
+ 
+     - **No primeiro terminal, inicie o Frontend (Vite):**
+       ```bash
+       npm run dev
+       ```
+ 
+     - **No segundo terminal, inicie o Backend (Node.js/Express):**
+       ```bash
+       npm run dev:backend
+       ```
+ 
+4.  **Acesse a aplicação:** 
+    Após seguir esses passos, a aplicação frontend estará disponível em `http://localhost:5173` (ou a porta indicada no terminal) e o servidor backend estará rodando na porta `3001`.
+    Após iniciar os servidores, a aplicação frontend estará disponível em `http://localhost:5173` (ou a porta indicada no terminal) e o servidor backend estará rodando na porta `3001`.
 
 ## 📁 Estrutura do Projeto
 
@@ -75,6 +83,9 @@ projeto-interativo/
 ├── src/
 │   ├── assets/
 │   │   └── componetes/
+├── src/                        # Código-fonte do Frontend
+│   ├── assets/                 # Recursos estáticos (imagens, etc.)
+│   │   └── componentes/        # Componentes React
 │   │       ├── ErrorBoundary.jsx  # Componente para tratamento de erros
 │   │       ├── Formulario.jsx     # Componente principal do formulário
 │   │       └── InputField.jsx     # Componente de campo de entrada
